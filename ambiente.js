@@ -12,3 +12,13 @@ let set = new Set(frase);
 let fraseSemDuplicados = Array.from(set);
 let joinFrase = fraseSemDuplicados.join(' ');
 console.log(joinFrase);
+
+// Desafio 3
+
+// Desafio 4
+let msg = "hello, how are you? i'm fine, thank you."
+let palavras = msg.split(' ');
+for (let i=0; i < palavras.length; i++) {
+    palavras[i] = palavras[i][0].toUpperCase() + palavras[i].substring(1);
+}
+console.log(palavras.join(' '));
