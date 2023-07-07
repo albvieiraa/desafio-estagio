@@ -22,3 +22,16 @@ for (let i=0; i < palavras.length; i++) {
     palavras[i] = palavras[i][0].toUpperCase() + palavras[i].substring(1);
 }
 console.log(palavras.join(' '));
+
+// Desafio 5
+function palindrome(str){
+    let len = str.length;
+    for (let i=0; i<len/2; i++){
+        if(str[i] !== str[len-1-i]) {
+            return false;
+        }
+    }
+    return true
+}
+
+console.log(palindrome('racecar'))
