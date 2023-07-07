@@ -14,6 +14,35 @@ let joinFrase = fraseSemDuplicados.join(' ');
 console.log(joinFrase);
 
 // Desafio 3
+function verificarPalindromo(str) {
+    function isPalindromo(s) {
+      const len = s.length;
+      for (let i = 0; i < len / 2; i++) {
+        if (s[i] !== s[len - 1 - i]) {
+          return false;
+        }
+      }
+      return true;
+    }
+  
+    const len = str.length;
+    let longestPalindromo = '';
+  
+    for (let i = 0; i < len; i++) {
+      for (let j = i + 1; j <= len; j++) {
+        const substring = str.slice(i, j);
+        if (isPalindromo(substring) && substring.length > longestPalindromo.length) {
+          longestPalindromo = substring;
+        }
+      }
+    }
+  
+    return longestPalindromo;
+  }
+  
+  const string = "babad";
+  const longestPalindromo = verificarPalindromo(string);
+  console.log(longestPalindromo);
 
 // Desafio 4
 let msg = "hello, how are you? i'm fine, thank you."
